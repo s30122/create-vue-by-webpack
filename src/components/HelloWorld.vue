@@ -5,15 +5,19 @@
       <el-header>Header</el-header>
       <el-container>
         <el-aside >
-          <el-menu default-active="1" class="el-menu-vertical-demo">
+          <!--First,router(the props of el-menu) must set to true-->
+          <el-menu default-active="1" class="el-menu-vertical-demo" router="true">
             <el-submenu index="1">
               <template slot="title">
                 <i class="el-icon-location"></i>
                 <span>商戶首頁</span>
               </template>
-              <el-menu-item index="1-1">首頁</el-menu-item>
-              <el-menu-item index="1-2">基本信息</el-menu-item>
-              <el-menu-item index="1-3">角色設定</el-menu-item>
+              <!--Second, route(props of el-menu-item) must have '/'. ex:/A or /B 
+              Otherwise,if you click 1-1 => 1-3 => 1-2 ,will route fail,url will be http://localhost:8080/#/BasicInfo/BasicInfo
+              -->
+              <el-menu-item index="/Home">首頁</el-menu-item>
+              <el-menu-item index="/BasicInfo">基本信息</el-menu-item>
+              <el-menu-item index="/BasicInfo/three">角色設定</el-menu-item>
             </el-submenu>
             <el-submenu index="2">
               <template slot="title">
@@ -25,7 +29,9 @@
 
           </el-menu>
         </el-aside>
-        <el-main>Main</el-main>
+        <el-main>
+          <router-view></router-view>
+        </el-main>
       </el-container>
     </el-container>
   </div>
