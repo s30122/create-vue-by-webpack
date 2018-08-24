@@ -4,10 +4,10 @@ module.exports = {
         "es6": true
     },
     "extends": "eslint:recommended",
+    
+    
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
+
         "ecmaVersion": 2015,
         "sourceType": "module"
     },
@@ -29,4 +29,5 @@ module.exports = {
             "always"
         ]
     }
+
 };
