@@ -4,7 +4,27 @@
     <el-container>
       <el-header>Header</el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
+        <el-aside >
+          <el-menu default-active="1" class="el-menu-vertical-demo">
+            <el-submenu index="1">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>商戶首頁</span>
+              </template>
+              <el-menu-item index="1-1">首頁</el-menu-item>
+              <el-menu-item index="1-2">基本信息</el-menu-item>
+              <el-menu-item index="1-3">角色設定</el-menu-item>
+            </el-submenu>
+            <el-submenu index="2">
+              <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>交易管理</span>
+              </template>
+              <el-menu-item index="2-1">訂單列表</el-menu-item>
+            </el-submenu>            
+
+          </el-menu>
+        </el-aside>
         <el-main>Main</el-main>
       </el-container>
     </el-container>
@@ -27,6 +47,7 @@ export default {
 h1 {
   font-weight: normal;
 }
+/*
 .el-header,
 .el-footer {
   background-color: #b3c0d1;
@@ -61,4 +82,5 @@ body > .el-container {
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
 }
+*/
 </style>
