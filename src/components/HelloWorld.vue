@@ -6,7 +6,7 @@
       <el-container>
         <el-aside >
           <!--First,router(the props of el-menu) must set to true-->
-          <el-menu default-active="1" class="el-menu-vertical-demo" router="true">
+          <el-menu default-active="1" class="el-menu-vertical-demo" router>
             <el-submenu index="1">
               <template slot="title">
                 <i class="el-icon-location"></i>
