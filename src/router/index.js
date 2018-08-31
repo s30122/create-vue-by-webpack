@@ -4,6 +4,7 @@ import HelloWorld from "@/components/HelloWorld";
 import D from "@/components/PartnerHome";
 import partnerInfo from "@/components/PartnerBasicInfo";
 import dd from "@/components/demo";
+import withdwar from "@/components/Withdraw";
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
               component: dd
             }
           ]
+        },
+        {
+          path: "WithdrawList",
+          name: "WithdrawComponent",
+          component: withdwar
         }
       ]
     }
