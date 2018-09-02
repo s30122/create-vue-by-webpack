@@ -5,6 +5,7 @@ import D from "@/components/PartnerHome";
 import partnerInfo from "@/components/PartnerBasicInfo";
 import dd from "@/components/demo";
 import withdwar from "@/components/Withdraw";
+import apply from "@/components/WithdrawApply";
 
 Vue.use(Router);
 
@@ -36,6 +37,11 @@ export default new Router({
           path: "WithdrawList",
           name: "WithdrawComponent",
           component: withdwar
+        },
+        {
+          path: "applyWithdraw",
+          name: "createwithdraw",
+          component: apply
         }
       ]
     }

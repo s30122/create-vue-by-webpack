@@ -1,7 +1,7 @@
 <template>
     <div>
-        
-          <el-col :span="8" v-for="item in PayMethodArray" :key="item.Vendor"> 
+        <h1>Home</h1>
+          <!-- <el-col :span="8" v-for="item in PayMethodArray" :key="item.Vendor"> 
                 <el-card >
                 <div slot="header" class="clearfix">
                     <img :src="'/static/'+item.Vendor+'-logo.jpg'" :class="[item.Enable?'image':'grayimage']" >
@@ -13,7 +13,7 @@
                     </el-col>
                 </el-row>                
                 </el-card>
-            </el-col> 
+            </el-col>  -->
        
     </div>
 </template>

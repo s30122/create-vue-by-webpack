@@ -38,9 +38,14 @@
         </el-row>
         <el-row>
           <el-col :span="2">
-            <el-button type="primary" icon="el-icon-circle-plus" @click=Apply()>申請提現</el-button>
+            <router-link to="/applyWithdraw">
+              <el-button type="primary" icon="el-icon-circle-plus" >申請提現
+              </el-button>
+            </router-link>
+            
           </el-col>
         </el-row>
+        <router-view></router-view>
     <el-table
       :data="tableData"
       style="width: 100%">
@@ -93,6 +98,7 @@
 <script>
 const moment = require("moment");
 const axios = require("axios");
+let $router = require("vue-router");
 export default {
   data() {
     return {
@@ -149,7 +155,9 @@ export default {
     };
   },
   methods: {
-    Apply() {},
+    Apply() {
+      $router.go;
+    },
     handleCurrentChange(page) {
       this.selectedPage = page;
       this.Query();
