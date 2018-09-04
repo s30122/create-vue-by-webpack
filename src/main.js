@@ -6,10 +6,12 @@ import router from "./router";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import moment from "moment";
+import JsonExcel from "vue-json-excel";
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 Vue.use(moment);
+Vue.component("downloadExcel", JsonExcel);
 
 /* eslint-disable no-new */
 new Vue({

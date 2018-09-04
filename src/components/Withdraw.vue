@@ -33,7 +33,13 @@
         <el-row>
             <el-col :span="4" :offset="20">
                 <el-button @click="Query()">搜尋</el-button>
-                <el-button>導出</el-button>
+                <el-button @click="exportExcel()">
+                  <template>
+                    <download-excel :data="tableData" :fields = "json_fields">
+                        導出
+                    </download-excel>
+                  </template>
+                </el-button>
             </el-col>
         </el-row>
         <el-row>
@@ -125,7 +131,37 @@ export default {
         { value: 4, text: "提款失敗" }
       ],
       TableRowCount: 0,
-      tableData: []
+      tableData: [],
+      json_fields: {
+        提現單號: "SN",
+        提現銀行卡: "CardInfo",
+        "金額(元)": {
+          field: "Amount",
+          callback: value => {
+            return Number(value).toFixed(2);
+          }
+        },
+        "手續費(元)": {
+          field: "Fee",
+          callback: value => {
+            return Number(value).toFixed(2);
+          }
+        },
+        日期: {
+          field: "Date",
+          callback: value => {
+            return moment(value).format("YYYY-MM-DD HH:mm:ss");
+          }
+        },
+        狀態: {
+          field: "Status",
+          callback: value => {
+            return this.WithdrawStatusEnum.find(item => {
+              return item.value === value;
+            }).text;
+          }
+        }
+      }
       // tableData: [
       //   {
       //     SN: "W001",
@@ -155,8 +191,11 @@ export default {
     };
   },
   methods: {
-    Apply() {
-      $router.go;
+    exportExcel() {},
+    FormatJson(jsonData) {
+      return jsonData.map(v => {
+        debugger;
+      });
     },
     handleCurrentChange(page) {
       this.selectedPage = page;
@@ -190,13 +229,13 @@ export default {
         });
     },
     FormateStatus(row, column, cellValue, index) {
-      return this.WithdrawStatusEnum.find(function(item) {
-        if (item.value === cellValue) return item.text;
-        else return "";
-      });
+      return this.WithdrawStatusEnum.find(item => {
+        return item.value === cellValue;
+      }).text;
     },
 
     ChangeStatus(key) {
+      a;
       axios
         .post(`http://localhost:23590/api/withdraw/ChangeSatus/${key}/3`, {})
         .then(response => {})
