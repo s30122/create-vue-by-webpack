@@ -1,5 +1,6 @@
 <template>
-  <el-tabs value="first" @tab-click="handleClick">
+  <h1>{{this.$route.params.name}}</h1>
+  <!-- <el-tabs value="first" @tab-click="handleClick">
     <el-tab-pane label="商戶信息" name="first">
         <el-row>
             <el-col :span="8" >
@@ -26,19 +27,7 @@
     </el-tab-pane>
     <el-tab-pane label="支付配置" name="second">
         
-             <!-- <el-col :span="6" :v-for="(item, index) in PayMethodArray" :key="index">
-                <el-card >
-                <div slot="header" class="clearfix">
-                    <img :src="'./assets/'+item.vendor+'.jpg'" class="[item.status?image:grayimage]">
-                </div>
-                 <el-row v-for="paychannel in item.paychannels" :key="paychannel.paymethod">
-                    <el-col :span="6">{{paychannel.paymethod}}</el-col>
-                    <el-col :span="6" :offset="12">
-                        <i class="el-icon-circle-check">{{paychannel.status}}</i>
-                    </el-col>
-                </el-row>                
-                </el-card>
-            </el-col>  -->
+      
 
     </el-tab-pane>
     <el-tab-pane label="銀行卡" name="third">
@@ -76,7 +65,7 @@
         </el-table-column>
       </el-table>
     </el-tab-pane>
-  </el-tabs>
+  </el-tabs> -->
 </template>
 <script>
 const axios = require("axios");

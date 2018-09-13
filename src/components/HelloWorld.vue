@@ -16,7 +16,9 @@
               Otherwise,if you click 1-1 => 1-3 => 1-2 ,will route fail,url will be http://localhost:8080/#/BasicInfo/BasicInfo
               -->
               <el-menu-item index="/Home">首頁</el-menu-item>
-              <el-menu-item index="/BasicInfo">基本信息</el-menu-item>
+              <el-menu-item index="/BasicInfo">基本信息no name</el-menu-item>
+              <el-menu-item index="/BasicInfo/aaa">基本信息 aaa</el-menu-item>
+              <el-menu-item index="/BasicInfo/bbb">基本信息 bbb</el-menu-item>
               <el-menu-item index="/BasicInfo/three">角色設定</el-menu-item>
             </el-submenu>
             <el-submenu index="2">
