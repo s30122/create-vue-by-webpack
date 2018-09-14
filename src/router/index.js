@@ -42,6 +42,10 @@ export default new Router({
           path: "applyWithdraw",
           name: "createwithdraw",
           component: apply
+        },
+        {
+          path: "ComponentTest",
+          component: () => import("@/components/Checkbox")
         }
       ]
     }

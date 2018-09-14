@@ -20,6 +20,7 @@
               <el-menu-item index="/BasicInfo/aaa">基本信息 aaa</el-menu-item>
               <el-menu-item index="/BasicInfo/bbb">基本信息 bbb</el-menu-item>
               <el-menu-item index="/BasicInfo/three">角色設定</el-menu-item>
+              <el-menu-item index="/ComponentTest">CheckBox 測試</el-menu-item>
             </el-submenu>
             <el-submenu index="2">
               <template slot="title">
