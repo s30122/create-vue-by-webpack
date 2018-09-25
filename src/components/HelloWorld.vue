@@ -21,6 +21,9 @@
               <el-menu-item index="/BasicInfo/bbb">基本信息 bbb</el-menu-item>
               <el-menu-item index="/BasicInfo/three">角色設定</el-menu-item>
               <el-menu-item index="/ComponentTest">CheckBox 測試</el-menu-item>
+              <el-menu-item index="/PromiseTest">Promise / Axios 測試</el-menu-item>
+              <el-menu-item index="/demoVuex1">vuex 測試 1</el-menu-item>
+              <el-menu-item index="/demoVuex2">vuex 測試 2</el-menu-item>
             </el-submenu>
             <el-submenu index="2">
               <template slot="title">

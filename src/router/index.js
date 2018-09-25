@@ -46,6 +46,18 @@ export default new Router({
         {
           path: "ComponentTest",
           component: () => import("@/components/Checkbox")
+        },
+        {
+          path: "PromiseTest",
+          component: () => import("@/components/demoPromise")
+        },
+        {
+          path: "demoVuex1",
+          component: () => import("@/components/demoStore1")
+        },
+        {
+          path: "demoVuex2",
+          component: () => import("@/components/demoStore2")
         }
       ]
     }

@@ -7,6 +7,7 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import moment from "moment";
 import JsonExcel from "vue-json-excel";
+import store from "./store";
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
@@ -17,6 +18,7 @@ Vue.component("downloadExcel", JsonExcel);
 new Vue({
   el: "#app",
   router,
+  store,
   components: { App },
   template: "<App/>",
   render: h => h(App)
