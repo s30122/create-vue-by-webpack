@@ -13,7 +13,7 @@
                 </el-select>
             </el-col>
             <el-col :span="8">
-                <span>提現單號：</span>
+                <span>提現單號：stash1</span>
                 <el-input
                     placeholder="請輸入單號"
                     v-model="inputNO">
